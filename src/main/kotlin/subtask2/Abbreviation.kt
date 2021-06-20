@@ -4,6 +4,12 @@ class Abbreviation {
 
     // TODO: Complete the following function
     fun abbreviationFromA(a: String, b: String): String {
-        throw NotImplementedError("Not implemented")
+        var res = ""
+        for (letter in a.toUpperCase()) {
+            for (char in b) {
+                if (letter == char) res += letter
+            }
+        }
+        return if (res == b) "YES" else "NO"
     }
 }
